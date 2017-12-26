@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.hanyugyeong.mysimplegallery.MainActivity">
+    <!-- vertical 속성은 선형 레이아웃의 속성 중 하나로, 위젯들이 수직으로 정렬되도록 한다. -->
+
+
+    <!-- 마진을 아래 위 15dp 로 주었다. 가중치를 설정하기 위해 layout_height 값을 0dp 로 주었다. 가로방향으로는 화면에 꽉 차도록 match_parent 값을 주었다. -->
+    <!-- scaleType 속성은 뷰 크기에 대한 이미지 크기인데, fixXY는 이미지 크기에 상관없이 뷰에 꽉 차도록 한다. -->
+
+    <ImageView
+        android:id="@+id/big"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:scaleType="fitXY" />
+
+
+    <!-- 이미지 버튼끼리는 수평으로 정렬하도록 또 하나의 선형 레이아웃에 horizontal 값을 주었다. -->
+    <!-- 위의 이미지 뷰와 가중치가 4:1 으로, 이미지 뷰는 화면 세로방향의 5분의 4를 가지고, 아래의 버튼들은 화면 세로방향의 5분의 1를 가진다.-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        >
+
+        <!-- 각 이미지버튼들은 같은 가중치를 가진다.-->
+        <!-- 눌리면 imageClicked() 라는 함수가 호출된다. -->
+        <ImageButton
+            android:id="@+id/ap"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="imageClicked"
+            android:scaleType="fitXY"
+            android:src="@drawable/apple" />
+
+        <ImageButton
+            android:id="@+id/gr"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="imageClicked"
+            android:scaleType="fitXY"
+            android:src="@drawable/grape" />
+
+        <ImageButton
+            android:id="@+id/ban"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="imageClicked"
+            android:scaleType="fitXY"
+            android:src="@drawable/banana" />
+
+        <ImageButton
+            android:id="@+id/stra"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="imageClicked"
+            android:scaleType="fitXY"
+            android:src="@drawable/straberry" />
+     </LinearLayout>
+
+</LinearLayout>

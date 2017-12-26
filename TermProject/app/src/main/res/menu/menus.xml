@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <group>
+        <item
+            android:title="Menu Add"
+            app:showAsAction="never|withText"
+            android:onClick="onOptionsItemSelected"
+            android:id="@+id/add"
+            />
+        <item
+            android:title="Total Sales"
+            app:showAsAction="never|withText"
+            android:onClick="onOptionsItemSelected"
+            android:id="@+id/sales"
+            />
+        <item
+            android:title="Order List"
+            app:showAsAction="never|withText"
+            android:onClick="onOptionsItemSelected"
+            android:id="@+id/order"
+            />
+    </group>
+
+
+</menu>

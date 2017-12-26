@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hanyugyeong.ch6checkboxevent.MainActivity">
+
+
+    <CheckBox
+        android:id="@+id/pizza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="피자"
+        android:onClick="onCheckBoxClicked"
+       />
+
+    <CheckBox
+        android:id="@+id/hanbugur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="햄버거"
+        android:onClick="onCheckBoxClicked"
+        />
+
+    <CheckBox
+        android:id="@+id/chicken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="치킨"
+        android:onClick="onCheckBoxClicked"
+       />
+
+    <CheckBox
+        android:id="@+id/pastar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="파스타"
+        android:onClick="onCheckBoxClicked"
+       />
+</LinearLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingRight="16dp"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    android:orientation="vertical"
+    tools:context="com.example.hanyugyeong.mypizzaorderapp.MainActivity">
+    <!--수직으로 설정된 선형레이아웃에 상대적 패딩값 추가-->
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Dough!" />
+
+    <!-- 라디오 그룹 안의 세 가지 도우를 나타내는 라디오 버튼, 마지막 버튼에는 아래쪽에 대한 마진 값을 추가 설정함. -->
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/groupR">
+        <RadioButton
+            android:id="@+id/orgn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButton"
+            android:text="original(10000)" />
+
+        <RadioButton
+            android:id="@+id/nap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButton"
+            android:text="napola(15000)" />
+
+        <RadioButton
+            android:id="@+id/thi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:onClick="onRadioButton"
+            android:text="thin(13000)" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Topping!" />
+
+    <!-- 체크 박스 부분 : 세 가지 토핑에 대한 체크 박스, 제일 아래 체크 박스에는 아래 쪽에 대한 마진 값을 추가 설정함. -->
+    <CheckBox
+        android:id="@+id/peper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onCheckBox"
+        android:text="peperani(3000)" />
+
+    <CheckBox
+        android:id="@+id/pota"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="potato(2000)"
+        android:onClick="onCheckBox" />
+
+    <CheckBox
+        android:id="@+id/chee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:onClick="onCheckBox"
+        android:text="cheeze(4000)" />
+
+    <!-- 가격의 총합을 나타내는 부분, 가격 부분은 layout_gravity 속성을 사용하여 가운데 정렬시킴. -->
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="total" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="" />
+
+
+</LinearLayout>
